@@ -1,2 +1,2 @@
 # TIL
-TIL(Today I learn)
+TIL(Today I learned)
