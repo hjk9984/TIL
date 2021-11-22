@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 메타 데이터  -->
+    <!-- 빈 요소이므로 닫는 태그는 존재하지 않는다. -->
+    <!-- 4가지 유형을 가짐
+    name은 전체 페이지에 적용되는 "문서 레벨 메타데이터"
+    charset는 문서집합 선언
+    itemprop은 사용자 정의 메타데이터
+    http-equiv 유사한 이름의 HTTP 헤더가 제공하는 정보와 동일한 "프래그마 지시문"이 됩니다.
+    -->
+    <!-- 속성으로 name과 item prop은 content를 가짐 -->
+    <meta name="author" content="kim">
+    <meta name="description" content="html tags that must know">
+
+    <!-- 링크 -->
+    <!-- 외부 리소스 연결하기 위해서 사용 -->
+    <!-- 아래의 예시 처럼 rel(relation)과 href 사용 -->
+    <!-- 여러개의 link를 사용할 수 있으며 type은 미디어 타입을 명시한다 -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="apple-icon-114.png" type="image/png">
+</head>
+<body>
+    <!-- 시멘틱 태그 -->
+    <!-- 시멘틱 태그는 div태그와 같은 기능을 수행하는 태그 -->
+
+    <header>
+        <!-- 보통 홈페이지의 상단 호고나 메인메뉴를 담고 있음 -->
+        <h2>title title</h2>
+        <!--  -->
+        <p>paragraph</p>
+        
+        <!-- 줄바꿈 태그, 닫기 태그 없음 -->
+        <br>
+        <blockquote>block quote <br> be kind and be brave</blockquote>
+        <p>
+            <b>b   hi world</b><br>
+            <i>i   itelic</i><br>
+            <u>u   under line </u><br>
+            <s>s   cancel line</s><br>
+        </p><br>
+
+        <code>code    print("hi world")</code>
+        <p>x<sub>z</sub> + x <sup>2</sup> </p>
+        <abbr title="abbreviation">abbr</abbr>
+
+    </header>
+
+    <main></main>
+        <ol type="a">
+            <li>a</li>
+            <li>b</li>
+        </ol>
+
+        <ol type="i">
+            <li>i</li>
+            <li>ii</li>
+        </ol>
+
+    <section></section>
+    <aside></aside>
+    <footer></footer>
+
+    <nav>
+        <!-- 메인메뉴같은 경우 많이 쓰이며 탐색 링크의 집합을 정의-->
+    </nav>
+
+    <article>
+        <!-- 내용이 독립적인 것을 포함하는 경우 사용하는 묶음 태그 -->
+    </article>
+
+    <section>
+        <!-- 문서의 일부분을 정의 -->
+        <!-- W3C에 따르면 섹션 태그는 일반적으로 제목이 있는 주제별 콘텐츠 그룹 -->
+    </section>
+
+    <figure>
+        <!-- 그림 도표 등 같은 태그를 지정할 때 묶는 태그 -->
+    </figure>
+
+    <div></div>
+
+</body>
+</html>
