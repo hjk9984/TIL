@@ -2,7 +2,7 @@
 **gitignore 패턴**
 > #는 주석을 의미한다.
 > 
-> /로 시작하면 하위 디렉토리는 무시한다. (not recursivity)
+> /로 시작하면 현재 디렉토리에 있는 파일만을 의미하고 하위 디렉토리는 무시한다. (not recursivity)
 > 
 > 디렉터리는 /를 끝에 사용하는 것으로 표현한다.
 >
@@ -17,7 +17,8 @@
     # exclude a.log from *.log
     !a.log
 
-    # ignore the b.py file in current directory except subdir
+    # ignore the b.py file in current directory except subdir.
+    # for example, ./b.py is ignore but test_dir/b.py isn't ignored
     /b.py
 
     # ignore all files in any directory named tmp
