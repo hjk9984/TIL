@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*~~~~~~~~~~~~~ box-sizing ~~~~~~~~~~~~~*/
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lime;
+            margin-bottom: 10px;
+        }
+
+        .inner {
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+        }
+
+        .box2 {
+            padding: 10px;
+            box-sizing: border-box;
+            border: 10px solid black;
+        }
+        /*선 굵기, 타입, 색*/
+
+        .box3 {
+            padding: 10px;
+            box-sizing: content-box;
+            border: 10px dashed red;
+        }
+
+        /* 박스가 왜이렇게 크지라고 생각하면 보통 box-sizing 문제 -->
+        box-sizing은 default가 content-box이고
+        border-box는 패딩과 보더를 포함해서 w, h를 계산한다.
+        보통 padding을 넣을 때는 border-box를 이용하나봄 */
+
+
+        /*~~~~~~~~~~~~~ position ~~~~~~~~~~~~~*/
+        .outer {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+            background-color: green;
+        }
+
+        .outer .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+        }
+
+        .outer .inner {
+            width: 100%;
+            height: 50%;
+        }
+
+        .outer .inner1 {
+            background-color: blue;
+        }
+        .outer .inner2 {
+            background-color: yellow;
+        }
+
+        .box1 .inner1 {
+            position:relative;
+            top: 30px;
+            left: 100px;
+        }
+
+        .box2 .inner1 {
+            position: absolute;
+            left: 200px;
+        }
+        
+        /* static은 기본값이고 top, left 이런거 효과 없음
+        absolute 근접한 부모중에 기본값이 스테틱이 아닌 부모의 기준에서 움직임
+        다른 아이템이 움직임
+        없으면 body까지 감
+        relative 원래 있던 자리를 유지하면서 움직이는 것
+        그래서 inner2는 그대로 그 자리에 있게 됨*/
+
+
+        /*~~~~~~~~~~~~~ position sticky ~~~~~~~~~~~~~*/
+        .container .box1 {
+            text-align: end;
+        }
+        
+        .container .box2 {
+            background-color: pink;
+            position: sticky;
+            top: 20px;
+            left: 20px;
+        }
+
+        .container .box4 {
+            background-color: aqua;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+        }
+
+
+        /*~~~~~~~~~~~~~ alignment ~~~~~~~~~~~~~*/
+        .align {
+            width: 200px;
+            height: 100px;
+            background-color: beige;
+        }
+
+        .align .inner1 {
+            width: 50%;
+            height: 50%;
+            background-color: blue;
+            margin: auto;
+        }
+
+        .align2 {
+            text-align: center;
+        }
+
+        .align .inner3 {
+            width: 50%;
+            height: 50%;
+            background-color: aquamarine;
+            transform: translate(50%, 120%);
+        }
+
+        .align4 {
+            text-align: center;
+            line-height: 50px;
+        }
+
+        /*margin은 블록레벨을 수평에서만 정렬 
+        text-align은 inline 요소들을 수평에서 정렬 
+        line-height는 정의한 만큼 이동하게 함 자간이라고 보면 됨  
+        translate에서 %를 사용하면 자기 자신의 wh기준에서 정함 */
+        
+
+        /*~~~~~~~~~~~~~ transform ~~~~~~~~~~~~~*/
+        
+
+    </style>
+
+</head>
+<body>
+    <h1>box-sizing</h1>
+    <h3>box withiout padding </h3>
+    <div class="box box1">
+        <div class="inner"></div>
+    </div>
+
+    <h3>border-box</h3>
+    <div class="box box2">
+        <div class="inner"></div>
+    </div>
+
+    <h3>content-box</h3>
+    <div class="box box3">
+        <div class="inner"></div>
+    </div>
+
+    <br>
+
+    <h1>position</h1>
+    <div class="outer">
+        <div class="box box1">
+            <div class="inner inner1">inner1</div>
+            <div class="inner inner2">inner2</div>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="box box2">
+            <div class="inner inner1">inner1</div>  
+            <div class="inner inner2">inner2</div>
+        </div>
+    </div>
+
+    <h1>position of sticky and fixed</h1>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2 sticky</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4 fixed</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+    </div>
+
+    <h1>alignment</h1>
+    <h3>margin: auto</h3>
+    <div class="align align1">
+        <div class="inner inner1"></div>
+    </div>
+    <h3>text-align: center</h3>
+    <div class="align align2">
+        <button>Text</button>
+    </div>
+    <h3>translate(50%, 50%)</h3>
+    <div class="align align3">
+        <div class="inner inner3"></div>
+    </div>
+    <h3>text centering</h3>
+    <div class="align align4">
+        <p>text <br> text</p>
+    </div>
+
+    <h1>transform</h1>
+
+</body>
+</html>
