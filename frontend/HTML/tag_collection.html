@@ -86,5 +86,139 @@
 
     <div></div>
 
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <br>
+    <p>div>ul>li</p>
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+
+    <p>div>ul+ol</p>
+    <div>
+        <ul></ul>
+        <ol></ol>
+    </div>
+    
+    <p>ul>li*4</p>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <p>div>ul>li^ol</p>
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+        <ol></ol>
+    </div>
+
+    <p>div>(header>ul>li*2>a)+footer>p</p>
+    <div>
+        <header>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </header>
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+
+    <p>p{hello}</p>
+    <p>hello</p>
+
+    <p>p.class${item $}*3</p>
+    <p class="class1">item 1</p>
+    <p class="class2">item 2</p>
+    <p class="class3">item 3</p>
+
+    <!-- lorem -->
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos quod odio aliquam deserunt laudantium eaque autem velit nemo possimus. Obcaecati architecto, tempore dolore voluptatem maxime in quibusdam dolor inventore praesentium.</p>
+    <p>Lorem ipsum dolor sit.</p>
+
+
+    <!-- html basic -->
+    <h1>heading1</h1>
+    <h2>heading2</h2>
+    <button>click me!</button>
+
+    
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- 박스와 아이템으로 나뉘고 박스는 보통 안보인다. -->
+    <!-- box -->
+    <header></header>
+    <footer></footer>
+    <section></section>
+    <span></span>
+
+    <!-- item -->
+    <h1>hi</h1>
+    <a href="https://google.com" target=_blank>click</a>
+
+    <!-- block vs inline -->
+    <p><b>b</b> is ...</p>
+    <p><span>span</span> is ...</p>
+    <p><div>div</div> is ...</p>
+
+    <!-- list: ol, ul, li -->
+    <ol type="i" reversed>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+
+    <!-- input -->
+    <label for="">Name: </label>
+    <input type="text" id="input_name">
+    <input type="color">
+    <input type="file">
+    <input type="password">
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <blockquote>be kind and be brave</blockquote>
+    <!-- b tag는 그냥 글자만 굵게 표시, strong은 검색엔진이 읽을 수도 있음 -->
+    <p>Lorem ipsum <b> dolor sit amet</b> consectetur <strong> adipisicing elit</strong>. Corporis, ut.</p>
+    <p><u>Lorem</u> ipsum <i> dolor sit amet</i> consectetur <em> adipisicing elit</em>. Corporis, ut.</p>
+    <p><abbr title="internet of thing">iot</abbr></p>
+    
+    <!-- discription list -->
+    <dl>
+        <dt>title</dt>
+        <dd>description</dd>
+    </dl>
+
+    <!-- table -->
+    <table>
+        <tr>
+            <!-- th는 중간에 위치하고 진하게 나온다-->
+            <th>col 0</th>
+            <th>col 1</th>
+            <th>col 2</th>
+        </tr>
+        <tr>
+            <td rowspan="2">rows</td>
+            <td>0 1</td>
+            <td>0 2</td>
+        </tr>
+        <tr>
+            <!-- <td>1 0</td> -->
+            <td>1 1</td>
+            <td>1 2</td>
+        </tr>
+    </table>
+
+    <!-- image alt는 alternative를 의미하며 이미지가 안 떳을때 나오는 텍스트-->
+    <!-- %는 현재 브라우저 창에서의 퍼센티지를 의미 -->
+    <img src="" alt="test" width="50%" height="100px">
+
+    <!-- content에 이미지 태그도 넣을 수 있음 -->
+    <a href="https://www.google.com" target="_blank">google</a>
+
 </body>
 </html>
