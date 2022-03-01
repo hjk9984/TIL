@@ -103,6 +103,7 @@
             position: fixed;
             top: 20px;
             left: 50%;
+            transform: translate(50%, 50%);
         }
 
 
@@ -120,6 +121,11 @@
             margin: auto;
         }
 
+        .align .inner2 {
+            width: 20%;
+            height: 50%;
+        }
+
         .align2 {
             text-align: center;
         }
@@ -128,7 +134,7 @@
             width: 50%;
             height: 50%;
             background-color: aquamarine;
-            transform: translate(50%, 120%);
+            transform: translate(50%, 50%);
         }
 
         .align4 {
@@ -136,11 +142,38 @@
             line-height: 50px;
         }
 
+        /* 블럭 레벨에서는 마진이 저절로 생김 
+        블록은 한 줄에 하나씩만 들어가기에 오른쪽에 마진이 생김
+        왼쪽도 골고루 마진을 주기 위해서는 margin:auto를 하면 됨*/
+
         /*margin은 블록레벨을 수평에서만 정렬 
         text-align은 inline 요소들을 수평에서 정렬 
+
         line-height는 정의한 만큼 이동하게 함 자간이라고 보면 됨  
         translate에서 %를 사용하면 자기 자신의 wh기준에서 정함 */
         
+
+        /*~~~~~~~~~~~~~ background ~~~~~~~~~~~~~*/
+        .bg {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .bg1 {
+            background-image: url('./imgs/2021-11-18-18-48-36.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .bg2 {
+            background: center no-repeat url('./imgs/2021-11-18-18-48-36.png');
+        }
+
+        .bg3 {
+            background: no-repeat right url('./imgs/2021-11-18-18-48-36.png');
+        }
 
         /*~~~~~~~~~~~~~ transform ~~~~~~~~~~~~~*/
         
@@ -199,6 +232,7 @@
     </div>
     <h3>text-align: center</h3>
     <div class="align align2">
+        <div class="inner inner2"></div>
         <button>Text</button>
     </div>
     <h3>translate(50%, 50%)</h3>
@@ -209,6 +243,12 @@
     <div class="align align4">
         <p>text <br> text</p>
     </div>
+
+    <h1>Background</h1>
+    <div class="bg bg1"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    
 
     <h1>transform</h1>
 
