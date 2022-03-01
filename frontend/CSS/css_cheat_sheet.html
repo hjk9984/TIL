@@ -176,7 +176,32 @@
         }
 
         /*~~~~~~~~~~~~~ transform ~~~~~~~~~~~~~*/
-        
+        .bt {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            margin-bottom: 20px;
+        }
+
+        .bt1 {
+            transform: translate(100px);
+        }
+
+        .bt2 {
+            transform: translate(50px, -15px);
+        }
+
+        .bt3 {
+            transform: scale(1.2);
+        }
+
+        .bt4 {
+            transform: rotate(45deg);
+        }
+
+        .bt5 {
+            transform: translate(100px, 100px) scale(1.5) rotate(30deg);
+        }
 
     </style>
 
@@ -251,6 +276,11 @@
     
 
     <h1>transform</h1>
+    <div class="bt bt1">bt1</div>
+    <div class="bt bt2">bt2</div>
+    <div class="bt bt3">bt3</div>
+    <div class="bt bt4">bt4</div>
+    <div class="bt bt5">bt5</div>
 
 </body>
 </html>
