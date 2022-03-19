@@ -36,8 +36,9 @@ static void do_cat(const char *path)
     if (!(fp = fopen(path, "r"))) // if failed, fopen return NULL
         die(path);
 
-    // fgetc(fp);    read 1byte and return the byte read
+    // fgetc(fp);    read 1byte and return the byte read. if failed, return EOF;
     // getc(fp);     getc is macro of fgetc
+    // fputc(int c, fp);    if failed, return EOF;
 
     while ((c = fgetc(fp)) != EOF) // EOF == -1
     {
