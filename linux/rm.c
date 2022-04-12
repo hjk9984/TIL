@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(int argc, char *argv[])
+{
+    int i;
+    if (argc < 1)
+    {
+        fprintf(stderr, "Usage : rm [ option ... ] file_name\n");
+        exit(1);
+    }
+
+    for (i = 1; i < argc; i++)
+    {
+        if (unlink(argv[i]) < 0)
+        {
+            perror(argv[i]);
+            exit(1);
+        }
+    }
+    exit(0);
+}
