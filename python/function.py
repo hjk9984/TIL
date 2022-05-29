@@ -108,3 +108,109 @@ chron(foo5, 1, 2, c=3)
 op = [4, 5, 6]
 #hoo(op) # >> error
 hoo(*op) # >> hoo(1, 2, 3)
+
+
+
+# --------------------------------------------
+import sys
+
+# function is instance
+# def add(x, y):
+def add(x : int, y : int) -> int:     #: int >> anootations
+    return x + y
+
+# when you define a function, a obj called PyFunctioinObject is generated
+# and check PyCodeOnject
+print(hex(id(add)))
+print(sys.getrefcount(add))
+print(sys.getsizeof(add))
+
+f = add
+f(1, 2)
+
+
+# the attributes of function obj
+def foo(a= 10, b= 20, *, c=30, d=40):
+    '''
+        explaination of foo function
+    '''
+
+print(foo.__doc__)
+print(foo.__name__)         # the name of function
+print(foo.__qualname__)     # flsName.funcName
+print(foo.__defaults__)
+print(foo.__kwdefaults__)
+
+print(add.__annotations__)
+#help(add)
+
+
+print('-'*30)
+def outer(x):
+    y = 0
+    print(hex(id(x)), hex(id(y)))
+
+    def inner():
+        nonlocal x, y
+        x = 10
+
+    return inner
+
+f = outer(10)
+print(f.__closure__)    # the outer var of closure(inner func)
+
+def foo1():
+    print('foo')
+
+print(foo.__dict__)
+
+foo.__dict__['x'] = 10
+foo.y = 20              #foo.__dict__['y'] = 20
+
+print(foo.__dict__)
+
+def goo():
+    print('goo')
+
+foo.goo = goo
+foo.goo()
+
+
+# user-defined func vs built-in func
+print(add.__dict__)
+# print(print.__dict__)     built-in func is optimized by c, they don have dict
+
+print(add)
+print(print)
+
+print(sys.getsizeof(add))
+print(sys.getsizeof(print))
+
+print(dir(add))
+print(dir(print))
+
+print('-'*30, 'default params')
+# default params
+# because s is mutable type, so error below is raised
+# so never use mutable type, or use None
+# def add_sharp(s=[]):
+#     s.append('#')
+#     return s
+def add_sharp(s=None):
+    if s is None:
+        s = []
+    s.append('#')
+    return s
+
+
+s1 = [1, 2, 3]
+print( add_sharp(s1) )
+
+print(add_sharp.__defaults__)
+print(add_sharp())
+
+print(add_sharp.__defaults__)
+print(add_sharp())
+
+print(add_sharp.__defaults__)
+print(add_sharp())
