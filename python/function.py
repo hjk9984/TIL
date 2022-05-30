@@ -214,3 +214,9 @@ print(add_sharp())
 
 print(add_sharp.__defaults__)
 print(add_sharp())
+
+
+# Python's default arguments are evaluated once when the function is defined, 
+# not each time the function is called (like it is in say, Ruby). 
+# This means that if you use a mutable default argument and mutate it, 
+# you will and have mutated that object for all future calls to the function as well.

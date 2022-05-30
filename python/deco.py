@@ -1,7 +1,3 @@
-from audioop import add
-from os import symlink
-
-
 def add_emotion(func):
                         # 이 부분은 최초에 한번만 실행
     def inner():

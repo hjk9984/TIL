@@ -1,6 +1,3 @@
-from tkinter import Y
-
-
 x = 0
 y = 0
 
@@ -10,8 +7,8 @@ def foo():
     x = 20      # generate local var
     y = 20
     z = 20      # generate global var
-    print(x)
-    print(y)
+    print('global', x)
+    print('global', y)
 
 print('local', x)
 print('local', y)
@@ -37,7 +34,7 @@ def outer(ox):
         oy = 10
     
     def check():
-        print(gx, ox, oy)
+        print(gx, ox, oy)   # 10 10 3
     
     return inner, check
 
